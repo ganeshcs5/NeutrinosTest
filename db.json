@@ -1,0 +1,27 @@
+{
+  "ids": {
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "user": 4,
+    "product": 4,
+    "cart": 8
+  },
+  "models": {
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "user": {
+      "string@test.com": "{\"email\":\"string@test.com\",\"password\":\"string\",\"name\":\"string\"}",
+      "ganesh_cs5@yahoo.com": "{\"email\":\"ganesh_cs5@yahoo.com\",\"password\":\"ganesh\",\"name\":\"Ganesh Chandrasekhara\"}",
+      "string": "{\"email\":\"string\",\"password\":\"string\",\"name\":\"string\"}"
+    },
+    "product": {
+      "string": "{\"name\":\"string\",\"price\":\"300\",\"image\":\"https://www.91-img.com/pictures/97744-v1-apple-iphone-7-mobile-phone-large-1.jpg\"}",
+      "ganesh": "{\"name\":\"ganesh\",\"price\":\"500\",\"image\":\"https://ss7.vzw.com/is/image/VerizonWireless/iphone7-front-matblk?$png8alpha256$&hei=410\"}"
+    },
+    "cart": {}
+  }
+}

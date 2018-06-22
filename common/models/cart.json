@@ -1,0 +1,32 @@
+{
+  "name": "cart",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "productName": {
+      "type": "string",
+      "index": {"unique": true},
+      "id": true 
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "email": {
+      "type": "string"
+    }
+
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+    "type": "belongsTo",
+    "model": "product",
+    "foreignKey": "productName"
+  }},
+  "acls": [],
+  "methods": {}
+}
