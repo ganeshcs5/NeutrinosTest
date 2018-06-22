@@ -3,24 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>NeutrinosUI</title>
-  <script type="text/javascript">
-    !function(name,path,ctx){
-      var latest,prev=name!=='Keen'&&window.Keen?window.Keen:false;ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;latest=w.Keen;if(prev){w.Keen=prev}else{try{delete w.Keen}catch(e){w.Keen=void 0}}ctx[name]=latest;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}
-    }('KeenAsync','https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.4.2.min.js',this);
-  
-    KeenAsync.ready(function(){
-      // Configure a client instance
-      var client = new KeenAsync({
-        projectId: '5b2ce598c9e77c0001dc46b1',
-        writeKey: '41F4C3AF8AD19EF60CCBD02BEC39A588FDC08B51A4BDC41ADA69946E368214D5E9950A26176E18C039EC01A161BAC7B940E68BE4EC7F6D0B4C93E846903AA9868EB3E6F7CAD252EDF49D66207F9045DBFE233711E11FC1C73D91FE40AD527CF7'
-      });
-  
-      // Record an event
-      client.recordEvent('pageviews', {
-        title: document.title
-      });
-    });
-  </script>
   <base href="/">
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
