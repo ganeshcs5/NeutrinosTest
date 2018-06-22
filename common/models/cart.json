@@ -9,8 +9,10 @@
   "properties": {
     "productName": {
       "type": "string",
-      "index": {"unique": true},
-      "id": true 
+      "index": {
+        "unique": true
+      },
+      "id": true
     },
     "quantity": {
       "type": "number"
@@ -18,15 +20,15 @@
     "email": {
       "type": "string"
     }
-
   },
   "validations": [],
   "relations": {
     "product": {
-    "type": "belongsTo",
-    "model": "product",
-    "foreignKey": "productName"
-  }},
+      "type": "belongsTo",
+      "model": "product",
+      "foreignKey": "productName"
+    }
+  },
   "acls": [],
   "methods": {}
 }

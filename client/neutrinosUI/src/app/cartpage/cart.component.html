@@ -1,24 +1,26 @@
-
-<app-header></app-header>
+<app-header>
+</app-header>
 
 <div *ngIf="itemCarts?.length == 0">
-<h3>There is no data in the cart</h3>
+    <h3>There is no data in the cart</h3>
 
 </div>
 <div class="row">
-    
-        <div class="col-sm-6 col-md-4" *ngFor="let itemCart of itemCarts"> 
-            <div class="thumbnail">
-                <img src={{itemCart.product.image}}   style="max-width:250px">
-                <div class="caption">
-                    <h3>{{itemCart.product.name}}</h3>
-                    <h4>Quantity: {{itemCart.quantity}}</h4>
-                    <div class="clearfix">
-                        <div class="price pull-left"><strong>Rs.{{itemCart.product.price}}</strong></div>
-                        
-                        <button class="btn btn-danger pull-right" (click)=remove(itemCart) >Remove</button>
+
+    <div class="col-sm-6 col-md-4" *ngFor="let itemCart of itemCarts">
+        <div class="thumbnail">
+            <img src={{itemCart.product.image}} style="max-width:250px">
+            <div class="caption">
+                <h3>{{itemCart.product.name}}</h3>
+                <h4>Quantity: {{itemCart.quantity}}</h4>
+                <div class="clearfix">
+                    <div class="price pull-left">
+                        <strong>Rs.{{itemCart.product.price}}</strong>
                     </div>
+
+                    <button class="btn btn-danger pull-right" (click)=remove(itemCart)>Remove</button>
                 </div>
             </div>
         </div>
     </div>
+</div>

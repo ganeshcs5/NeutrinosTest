@@ -11,29 +11,29 @@ import { Product } from './productservice';
 @Injectable()
 export class CartService {
 
-    constructor(private http: HttpClient, private cookies:CookieService) { 
+  constructor(private http: HttpClient, private cookies: CookieService) {
 
-    }
+  }
 
-        getCartData(email:string) {
-          return this.http.get<Cart[]>('http://localhost:3000/api/carts/getDataForUser?email='+email)
-                     .toPromise()
-                     .then(res => {   return <Cart[]>res["getDataForUser"]; });
-            }
+  getCartData(email: string) {
+    return this.http.get<Cart[]>('http://localhost:3000/api/carts/getDataForUser?email=' + email)
+      .toPromise()
+      .then(res => { return <Cart[]>res["getDataForUser"]; });
+  }
 
-        deleteFromCart(productName:string){
-          return this.http.delete("http://localhost:3000/api/carts/"+productName)
-          .toPromise()
-          .then(res=>{
-            return res;
-          });
+  deleteFromCart(productName: string) {
+    return this.http.delete("http://localhost:3000/api/carts/" + productName)
+      .toPromise()
+      .then(res => {
+        return res;
+      });
 
-        }
+  }
 }
 
-export interface Cart{
-  email?:string,
-  product?:Product,
-  quantity?:string
+export interface Cart {
+  email?: string,
+  product?: Product,
+  quantity?: string
 }
 

@@ -1,53 +1,55 @@
 <app-header></app-header>
 <div *ngIf="upload">
-        <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2>New Product</h2>
-                        <div class="row">
-                            <div class="col-sm-6 form-group">
-                                <label for="name">
-                                    Name:</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Product Name" maxlength="50" [(ngModel)]="newProduct.name">
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="price">
-                                    Price:</label>
-                                <input type="text" class="form-control" id="price" name="price" placeholder="Product Price"  maxlength="50" [(ngModel)]="newProduct.price">
-                            </div>
-                        </div>
-                      
-                        <div class="row">
-                            <div class="col-sm-12 form-group">
-                                <label for="image">
-                                    Image Link:</label>
-                                <textarea class="form-control" type="textarea" id="image" name="image" placeholder="Image Link" maxlength="600" rows="7" [(ngModel)]="newProduct.image"></textarea>
-                            </div>
-                        </div>
-                                    <div class="row">
-                            <div class="col-sm-12 form-group">
-                                <button type="submit" class="btn btn-lg btn-success btn-block" (click) = "uploadData()" id="btnContactUs">Upload </button>
-                            </div>
-                        </div>
-            
-                    
-                    
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>New Product</h2>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label for="name">
+                        Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Product Name" maxlength="50" [(ngModel)]="newProduct.name">
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="price">
+                        Price:</label>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Product Price" maxlength="50" [(ngModel)]="newProduct.price">
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="image">
+                        Image Link:</label>
+                    <textarea class="form-control" type="textarea" id="image" name="image" placeholder="Image Link" maxlength="600" rows="7"
+                        [(ngModel)]="newProduct.image"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button type="submit" class="btn btn-lg btn-success btn-block" (click)="uploadData()" id="btnContactUs">Upload </button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
 </div>
-<button *ngIf="!upload" type="button" class="btn btn-info" (click) = "openNewUplad()" >Add Product</button> 
-<div class="row" *ngIf="!upload" >
-    
-        <div class="col-sm-6 col-md-4" *ngFor="let product of products"> 
-            <div class="thumbnail">
-                <img src={{product.image}}   style="height: 300px;width:250px">
-                <div class="caption">
-                    <h3>{{product.name}}</h3>
-                    <div class="clearfix">
-                        <div class="price pull-left"><strong>Rs.{{product.price}}</strong></div>
-                        <button class="btn btn-success pull-right" (click)=addToCart(product) >Add to Shopping List</button>
+<button *ngIf="!upload" type="button" class="btn btn-info" (click)="openNewUplad()">Add Product</button>
+<div class="row" *ngIf="!upload">
+
+    <div class="col-sm-6 col-md-4" *ngFor="let product of products">
+        <div class="thumbnail">
+            <img src={{product.image}} style="height: 300px;width:250px">
+            <div class="caption">
+                <h3>{{product.name}}</h3>
+                <div class="clearfix">
+                    <div class="price pull-left">
+                        <strong>Rs.{{product.price}}</strong>
                     </div>
+                    <button class="btn btn-success pull-right" (click)=addToCart(product)>Add to Shopping List</button>
                 </div>
             </div>
         </div>
     </div>
-
+</div>

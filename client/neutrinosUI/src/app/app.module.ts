@@ -6,10 +6,10 @@ import { LoginComponent } from './loginpage/login.component';
 import { LoginService } from './services/loginservices';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms'
-import { HttpClientModule } from '@angular/common/http'; 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import {RouterModule , Routes} from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 import { CookieService } from 'ngx-cookie-service';
 
 
@@ -32,12 +32,12 @@ import { ProductComponent } from './productpage/product.component';
     HttpModule,
     FormsModule,
     RouterModule.forRoot([
-      {path:'',component:LoginComponent},
-      {path:'product',component:ProductComponent},
-      {path:'cart',component:CartComponent}
+      { path: '', component: LoginComponent },
+      { path: 'product', component: ProductComponent },
+      { path: 'cart', component: CartComponent }
     ])
   ],
-  providers: [LoginService,CookieService,ProductService,CartService],
+  providers: [LoginService, CookieService, ProductService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

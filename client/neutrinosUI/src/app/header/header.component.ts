@@ -12,10 +12,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor(private cookiesServce:CookieService,private router:Router){
-    
+  constructor(private cookiesServce: CookieService, private router: Router) {
+
   }
-  logout(){
+  logout() {
     this.cookiesServce.deleteAll();
   }
 }
